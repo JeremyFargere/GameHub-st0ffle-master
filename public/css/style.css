@@ -1,0 +1,192 @@
+/** reset **/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* True Styling */
+
+header {
+  background: rgb(88, 87, 87) center / cover no-repeat url(/images/boardgames.jpg) ;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-family: fantasy;
+  font-size: 5rem;
+  padding: 10px;
+  text-align: center;
+  color: white!important;
+  background: rgba(100,100,100,0.8);
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+header nav{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+header nav ul {
+  background: rgba(255,255,255,0.8);
+  color: gb(243, 205, 18);
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  height: 50px;
+}
+
+header nav ul li {
+  text-align:center;
+  padding: 15px;
+  transition: all ease .5s;
+  font-size: 1rem;
+}
+
+header nav ul li:hover {
+  font-size: 1.2rem;
+  text-shadow: 0px 10px 4px rgba(0,0,0,0.5);
+}
+
+h3 {
+  text-align: center;
+  line-height: 3rem;
+}
+
+/**************************************************************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Monoton", cursive;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main {
+  height: 100vh;
+  background: radial-gradient(#fff, skyblue);
+}
+.up {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.up h2 {
+  font-size: 12em;
+  text-align: center;
+  color: darkred;
+  text-shadow: 15px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.up h2 span:nth-child(even) {
+  animation-delay: -1s;
+}
+.up h2 span {
+  display: inline-block;
+  animation: pos 2s ease-in-out infinite;
+}
+@keyframes pos {
+  0%,
+  100% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+.down {
+  position: relative;
+  padding: 44px;
+  height: 40vh;
+  background: linear-gradient(rgba(255, 0, 0, 0.4), rgba(0, 0, 123, 0.4)),
+    url("https://i.postimg.cc/QtGV3rSm/8858.jpg") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.down .content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.down .content h4 {
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: 4px;
+}
+.down .content a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 1.4em;
+  color: #fff;
+  background: darkred;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  outline: none;
+  letter-spacing: 2px;
+}
+.super {
+  position: absolute;
+  left: 30px;
+  bottom: 70px;
+  animation: sup 20s linear infinite;
+  transition: all 5s;
+}
+.fire {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 5px;
+  font-size: 3em;
+  text-align: center;
+  /*   background: url("https://i.postimg.cc/k5C97Nkr/26161.jpg") no-repeat;
+  background-size: 100% 100%;
+  bottom: -80px;
+  width: 100%;
+  height: 100px; */
+  animation: fire 10s linear infinite;
+  transition: all 5s ease-in-out;
+}
+@keyframes fire {
+  from {
+    transform: translateY(80px);
+    color: #fff;
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes sup {
+  from {
+    left: -100px;
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateX(1200px) translateY(-215px) rotate(20deg);
+  }
+}
+
+.homeReturn {
+  position: absolute;
+  bottom: 5rem;
+  left: 12vw;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  background: darkred;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.5s;
+}

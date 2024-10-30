@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>GameHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Ici on verifie si jamais on a passe cette variable a notre vue -->
+    <% if (typeof foundGame !== 'undefined' && foundGame.name === 'diceRoller') { %>
+        <link rel="stylesheet" href="/css/diceRoller.css">
+    <% } %>
+  </head>
+
+  <body>
+    <header>
+      <h1>GameHub</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+            <% for (const game of games) { %>
+                <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
+            <% } %>
+        </ul>
+      </nav>
+    </header>
