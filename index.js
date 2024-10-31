@@ -27,6 +27,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     // Rendu de la vue 'index' en passant les données de jeux
     res.render('index', { games })
+    next();
 })
 
 // Route pour une page de jeu spécifique
@@ -44,6 +45,11 @@ app.get('/game/:nomDuJeu', (req, res) => {
         // Si le jeu n'est pas trouvé, on rend une page d'erreur 404
         res.status(404).render('error404', { games });
     }
+})
+
+// généralisation de la page d'erreur 404
+app.use((req, res) => {
+    res.status(404).render('error404', { games });
 })
 
 // Démarrage du serveur sur le port défini

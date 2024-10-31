@@ -94,6 +94,22 @@ body {
   display: inline-block;
   animation: pos 2s ease-in-out infinite;
 }
+
+.homeReturn {
+  position: absolute;
+  bottom: 2rem;
+  left: -5.5vw;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  background: darkred;
+  padding: 15px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  transition: all 0.5s;
+}
+
 @keyframes pos {
   0%,
   100% {
@@ -107,9 +123,9 @@ body {
   position: relative;
   padding: 44px;
   height: 40vh;
-  background: linear-gradient(rgba(255, 0, 0, 0.4), rgba(0, 0, 123, 0.4)),
-    url("https://i.postimg.cc/QtGV3rSm/8858.jpg") no-repeat;
-  background-size: 100% 100%;
+  background: linear-gradient(rgb(100, 3, 3), rgba(41, 0, 123, 0.527));
+    
+  
   text-align: center;
 }
 
@@ -153,8 +169,8 @@ body {
   bottom: -80px;
   width: 100%;
   height: 100px; */
-  animation: fire 10s linear infinite;
-  transition: all 5s ease-in-out;
+  animation: fire 8s linear;
+  transition: all 5s ease-out;
 }
 @keyframes fire {
   from {
@@ -174,19 +190,4 @@ body {
   to {
     transform: translateX(1200px) translateY(-215px) rotate(20deg);
   }
-}
-
-.homeReturn {
-  position: absolute;
-  bottom: 5rem;
-  left: 12vw;
-  text-align: center;
-  font-size: 1.5em;
-  color: #fff;
-  text-decoration: none;
-  background: darkred;
-  padding: 10px;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  transition: all 0.5s;
 }
